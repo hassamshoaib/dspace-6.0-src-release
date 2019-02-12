@@ -15,8 +15,8 @@
 
  <form-map>
    <name-map collection-handle="default" form-name="traditional" />		
-   <name-map collection-handle="123456789/2" form-name="degree" /> 
-   <name-map collection-handle="123456789/3" form-name="transcript" /> 
+   <name-map collection-handle="123456789/36" form-name="degree" /> 
+   <name-map collection-handle="123456789/37" form-name="transcript" /> 
 </form-map>
 
 
@@ -226,25 +226,52 @@ it, please enter the types and the actual numbers or codes.</hint>
    <form name="degree">
      <page number="1">
 
+
        <field>
          <dc-schema>dc</dc-schema>
-         <dc-element>studentRegNum</dc-element>
-         <repeatable>false</repeatable>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
          <label>Registration Number</label>
          <input-type>onebox</input-type>
-         <hint>Enter student registration number</hint>
-         <required>You must enter student registration number.</required>
+         <hint>Enter the names of the authors of this item.</hint>
+         <required></required>
        </field>
 
        <field>
          <dc-schema>dc</dc-schema>
-         <dc-element>studentNic</dc-element>
+         <dc-element>title</dc-element>
+         <dc-qualifier></dc-qualifier>
          <repeatable>false</repeatable>
-         <label>NIC</label>
+         <label>Title</label>
          <input-type>onebox</input-type>
-         <hint>Enter student NIC number</hint>
-         <required>You must enter student NIC number.</required>
+         <hint>Enter the main title of the item.</hint>
+         <required>You must enter a main title for this item.</required>
        </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>subject</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <!-- An input-type of twobox MUST be marked as repeatable -->
+         <label>Student NIC</label>
+         <input-type>onebox</input-type>
+         <hint>Enter appropriate subject keywords or phrases. </hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issued</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Date of Issue</label>
+         <input-type>date</input-type>
+         <hint>Please give the date of previous publication or public distribution.
+                        You can leave out the day and/or month if they aren't
+                        applicable.</hint>
+         <required>You must enter at least the year.</required>
+       </field>
+
 
 	<field>
          <dc-schema>dc</dc-schema>
@@ -294,26 +321,53 @@ it, please enter the types and the actual numbers or codes.</hint>
    <form name="transcript">
      <page number="1">
 
+
        <field>
          <dc-schema>dc</dc-schema>
-         <dc-element>studentRegNum</dc-element>
-         <repeatable>false</repeatable>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
          <label>Registration Number</label>
          <input-type>onebox</input-type>
-         <hint>Enter student registration number</hint>
-         <required>You must enter student registration number.</required>
+         <hint>Enter the names of the authors of this item.</hint>
+         <required></required>
        </field>
 
        <field>
          <dc-schema>dc</dc-schema>
-         <dc-element>studentNic</dc-element>
+         <dc-element>title</dc-element>
+         <dc-qualifier></dc-qualifier>
          <repeatable>false</repeatable>
-         <label>NIC</label>
+         <label>Title</label>
          <input-type>onebox</input-type>
-         <hint>Enter student NIC number</hint>
-         <required>You must enter student NIC number.</required>
+         <hint>Enter the main title of the item.</hint>
+         <required>You must enter a main title for this item.</required>
        </field>
 
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>subject</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <!-- An input-type of twobox MUST be marked as repeatable -->
+         <label>Student NIC</label>
+         <input-type>onebox</input-type>
+         <hint>Enter appropriate subject keywords or phrases. </hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issued</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Date of Issue</label>
+         <input-type>date</input-type>
+         <hint>Please give the date of previous publication or public distribution.
+                        You can leave out the day and/or month if they aren't
+                        applicable.</hint>
+         <required>You must enter at least the year.</required>
+       </field>       
+       
+	
 	<field>
          <dc-schema>dc</dc-schema>
          <dc-element>studentName</dc-element>
